@@ -1,0 +1,75 @@
+@import "./setup/animation.scss";
+@import "./setup/functions.scss";
+@import "./setup/mixins.scss";
+@import "./setup/variables.scss";
+@import "./setup/typography.scss";
+@import "./basics/base.scss";
+@import "./basics/helpers.scss";
+@import "./basics/layout.scss";
+@import "./basics/layouthome.scss";
+
+
+.main {
+  display: flex;
+  min-height: calc(100vh - 90px - 55px); //header 55px footer 90px(desktop)
+  align-items: center;
+  justify-self: center;
+  flex-direction: column;
+  @include for-mobile-layout {
+    min-height: calc(100vh - 175px - 55px); //header 55px footer 175px(mobile)
+    gap: 0;
+  }
+
+  .card-swiper {
+    width: 100%;
+    margin-left: 20px;
+  }
+
+  .section-title {
+    @include for-mobile-layout {
+      font-size: 14px;
+    }
+    letter-spacing: 2px;
+    font-size: 30px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    background-color: $card-background-color;
+    font-size: 25px;
+    text-align: center;
+    justify-content: space-between;
+    cursor: pointer;
+    img {
+      object-fit: cover;
+    }
+    p {
+      margin: 0 30px;
+    }
+    .card-title {
+      font-family: HelveticaNeue, Arial, Helvetica, sans-serif;
+      font-size: 40px;
+    }
+  }
+}
+@import "./components/header.scss";
+@import "./components/pages/homepage/homepage.scss";
+@import "./components/pages/restaurants-page/restaurants-page.scss";
+@import "./components/pages/single-restaurant-page/single-restaurant.scss";
+@import "./components/footer.scss";
+
+.search-input-div {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  border: 1px solid rgba(black, 0.5);
+  border-radius: 4px;
+  opacity: 0.53;
+  .search-input {
+    width: 80%;
+    background: none;
+  }
+}

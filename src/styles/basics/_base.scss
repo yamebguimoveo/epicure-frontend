@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: HelveticaNeueThin, Arial, Helvetica, sans-serif;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: inline-block;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  border: none;
+  color: black;
+  background: none;
+  cursor: pointer;
+}
+
+input {
+  border: none;
+  -webkit-appearance: none;
+  outline: 0px solid transparent;
+}
+
+img {
+  width: 100%;
+}

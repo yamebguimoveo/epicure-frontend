@@ -1,0 +1,151 @@
+@import "./dish-modal.scss";
+@import "./dish-popup.scss";
+.restaurant-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1100px;
+  .restaurant-page-image {
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  .restaurant-title {
+    font-family: HelveticaNeue;
+    font-size: 55px;
+  }
+  .restaurant-chef {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  .restaurant-availability {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 50px;
+    img {
+      width: 15px;
+      height: 15px;
+    }
+  }
+  .filter-navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    button {
+      font-family: HelveticaNeueThin;
+      font-size: 25px;
+      padding: 0;
+    }
+    .nav-active {
+      border-bottom: 2px solid rgba($background-color, 0.9);
+    }
+  }
+  .dish-cards {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    width: 100%;
+    max-width: 1100px;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 20px;
+
+    .card {
+      justify-content: start;
+      font-size: 19px;
+      width: 235px;
+      height: 410px;
+      img {
+        height: 150px;
+        margin-bottom: 20px;
+      }
+      .card-title {
+        font-size: 22px;
+        margin-bottom: 20px;
+      }
+      .dish-footer {
+        height: 100%;
+        justify-content: space-between;
+        .card-price {
+          padding-bottom: 15px;
+        }
+        .sensitivities-icons {
+          display: none;
+        }
+        .price-line {
+          width: 50px;
+
+          border-bottom: 2px solid $header-border-color;
+        }
+        .price {
+          margin: 0 3px;
+        }
+      }
+    }
+  }
+  @include for-mobile-layout {
+    .restaurant-title {
+      font-family: HelveticaNeue;
+      font-size: 35px;
+    }
+    .restaurant-chef {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+    .restaurant-availability {
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+      margin-bottom: 20px;
+      font-size: 12px;
+      img {
+        width: 15px;
+        height: 15px;
+      }
+    }
+    .filter-navbar {
+      button {
+        font-size: 15px;
+      }
+      gap: 20px;
+      margin-bottom: 25px;
+    }
+    .dish-cards {
+      gap: 25px;
+      .card {
+        font-size: 13px;
+        width: 160px;
+        height: 270px;
+        img {
+          height: 100px;
+          margin-bottom: 10px;
+        }
+
+        .card-title {
+          font-size: 15px;
+          margin-bottom: 10px;
+        }
+        .dish-footer {
+          .card-price {
+            .price-line {
+              width: 30px;
+              border-bottom: 1px solid $header-border-color;
+            }
+            .price {
+              margin: 0 3px;
+            }
+          }
+        }
+        .sensitivities-icons {
+          display: none;
+        }
+      }
+    }
+  }
+}

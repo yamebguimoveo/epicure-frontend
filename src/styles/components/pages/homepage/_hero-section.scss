@@ -1,0 +1,88 @@
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  height: 695px;
+  max-width: 1440px;
+  width: 100%;
+  background-image: url("../../public/assets/hero-picture/hero-picture.png");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 140px;
+  .hero-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    max-height: 220px;
+    max-width: 780px;
+    width: 80%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.88);
+    color: $primary-text-color;
+    .hero-card-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-self: center;
+      gap: 20px;
+      max-width: 510px;
+      width: 90%;
+    }
+    .hero-background {
+      max-width: 1440px;
+      background-fit: cover;
+    }
+    .hero-title {
+      font-size: 35px;
+      letter-spacing: 2px;
+      padding: 0 10px 0 60px;
+    }
+    .search-input-div {
+      height: 50px;
+      width: 100%;
+      .search-input {
+        font-size: 22px;
+      }
+      .search-icon {
+        margin: 0 20px;
+        height: 30px;
+        width: 30px;
+      }
+    }
+  }
+  @include for-mobile-layout {
+    animation: slideInFromLeft 0.3s;
+    height: 270px;
+    max-width: 500px;
+    margin-bottom: 0;
+    .hero-background {
+      background-size: cover;
+    }
+    .hero-card {
+      max-height: 125px;
+      max-width: 340px;
+      width: 90%;
+      margin: 0 auto;
+      .hero-title {
+        font-size: 16px;
+        text-align: center;
+        padding: 0 40px;
+      }
+      .search-input-div {
+        height: 33px;
+        width: 85%;
+        .search-input {
+          font-size: 13px;
+        }
+        .search-icon {
+          margin: 9px;
+          height: 16px;
+          width: 16px;
+        }
+      }
+    }
+  }
+}

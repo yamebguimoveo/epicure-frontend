@@ -1,0 +1,129 @@
+.dish-modal-close {
+  display: flex;
+  position: fixed;
+  background: none;
+  top: 3%;
+  .dish-modal-close-button {
+    width: 20px;
+    height: 20px;
+  }
+  @include for-mobile-layout {
+    top: 0;
+    height: 45px;
+    width: 100%;
+    background-color: white;
+    .dish-modal-close-button {
+      filter: invert(100%) sepia(100%) saturate(2);
+      width: 15px;
+      height: 15px;
+      align-self: center;
+      margin-left: 20px;
+    }
+  }
+}
+.dish-modal {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .dish-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 25px;
+  }
+  .dish-title {
+    margin-bottom: 15px;
+    font-size: 35px;
+    font-family: HelveticaNeue;
+  }
+  .dish-footer {
+    max-width: 200px;
+    text-align: center;
+    .sensitivities-icons {
+      height: 20px;
+      img {
+        width: 30px;
+        object-fit: fill;
+      }
+      margin-bottom: 10px;
+    }
+    .dish-description {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .card-price {
+      .price {
+        font-size: 24px;
+      }
+      .price-line {
+        width: 90px;
+        border: solid 0.5px black;
+      }
+    }
+    margin-bottom: 40px;
+  }
+  .dish-side-option,
+  .dish-change-option {
+    input {
+      -webkit-appearance: auto;
+    }
+    margin-bottom: 30px;
+  }
+  .dish-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .dish-form-side,
+    .dish-form-changes,
+    .dish-form-quantity {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 40px;
+      font-size: 18px;
+    }
+    .dish-form-title {
+      margin: auto;
+      margin-bottom: 25px;
+      span {
+        text-align: center;
+        border-bottom: 2px solid rgba(222, 146, 0, 0.9);
+      }
+    }
+    .dish-form-quantity {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .quantity-input {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-self: center;
+        gap: 40px;
+        .quantity-button {
+          font-family: HelveticaNeueThin;
+          font-size: 30px;
+        }
+        .disabled {
+          cursor: not-allowed;
+          color: rgba(black, 0.3);
+        }
+      }
+    }
+    .dish-form-submit {
+      width: 200px;
+      height: 50px;
+      color: white;
+      font-family: HelveticaNeue;
+      background-color: black;
+      font-size: 19px;
+      margin-bottom: 25px;
+    }
+  }
+  @include for-mobile-layout {
+    width: 100%;
+  }
+}

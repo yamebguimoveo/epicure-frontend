@@ -1,0 +1,42 @@
+.icons-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  height: 270px;
+  background-color: rgba($background-secondary-color, 0.9);
+  padding: 40px 0;
+  margin-bottom: 100px;
+  gap: 30px;
+  width: 100%;
+  .icons {
+    gap: 110px;
+    .icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-self: center;
+      gap: 30px;
+      .icon-image {
+        height: 60px;
+        width: 60px;
+      }
+    }
+  }
+  @include for-mobile-layout {
+    margin-bottom: 70px;
+    gap: 20px;
+    padding: 10px 0;
+    height: 135px;
+    .icons {
+      gap: 60px;
+      .icon {
+        gap: 15px;
+        .icon-image {
+          height: 35px;
+          width: 35px;
+        }
+      }
+    }
+  }
+}
