@@ -30,6 +30,9 @@
     width: 360px;
     height: 360px;
     padding-bottom: 25px;
+    img {
+      height: 220px;
+    }
   }
   @include for-mobile-layout {
     margin-top: 0px;

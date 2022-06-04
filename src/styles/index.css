@@ -1269,6 +1269,10 @@ ul {
   padding-bottom: 25px;
 }
 
+.recommended-restaurant-section .card img {
+  height: 220px;
+}
+
 @media (max-width: 500px) {
   .recommended-restaurant-section {
     margin-top: 0px;
@@ -1797,6 +1801,10 @@ ul {
 
 .restaurants-cards .card p {
   padding: 0 0 25px;
+}
+
+.restaurants-cards .card img {
+  height: 210px;
 }
 
 @media (max-width: 500px) {
