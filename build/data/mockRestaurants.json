@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "chef": "Ran Shmueli",
+    "restaurantName": "Claro",
+    "imagePath": "/assets/pictures/claro.jpg",
+    "tags": ["New"],
+    "dishesId": [1, 2, 3, 4, 5, 6]
+  },
+  {
+    "id": 2,
+    "chef": "Meir Adoni",
+    "restaurantName": "Lumina",
+    "imagePath": "/assets/pictures/lumina.jpg",
+    "tags": ["Most Popular"],
+    "dishesId": [1, 2, 3, 4, 5, 6]
+  },
+  {
+    "id": 3,
+    "chef": "Yanir Green",
+    "restaurantName": "Tiger Lilly",
+    "imagePath": "/assets/pictures/tiger-lili.jpg",
+    "tags": ["New"],
+    "dishesId": [1, 2, 3, 4, 5, 6]
+  },
+  {
+    "id": 4,
+    "chef": "Yanir Green",
+    "restaurantName": "Tiger Lilly",
+    "imagePath": "/assets/pictures/tiger-lili.jpg",
+    "tags": ["New"],
+    "dishesId": [1, 2, 3, 4, 5, 6]
+  },
+  {
+    "id": 5,
+    "chef": "Meir Adoni",
+    "restaurantName": "Lumina",
+    "imagePath": "/assets/pictures/lumina.jpg",
+    "tags": ["New"],
+    "dishesId": [1, 2, 3, 4, 5, 6]
+  },
+  {
+    "id": 6,
+    "chef": "Ran Shmueli",
+    "restaurantName": "Claro",
+    "imagePath": "/assets/pictures/claro.jpg",
+    "tags": ["New"],
+    "dishesId": [1, 2, 3, 4, 5, 6]
+  }
+]
