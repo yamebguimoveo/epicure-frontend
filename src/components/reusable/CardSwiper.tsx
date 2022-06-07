@@ -4,7 +4,6 @@ import { Lazy } from "swiper";
 import { Card } from "./Card";
 import "swiper/css";
 import "swiper/css/lazy";
-import { isTemplateMiddle } from "typescript";
 
 const isDish = (object: Dish | Restaurant): object is Dish => {
   return (object as Dish).price !== undefined;
@@ -17,7 +16,7 @@ export const CardSwiper = (props: {
 }) => {
   //for mobile carousel
   const mobileWidth = props.isMinimalCardShow ? 170 : props.isDish ? 260 : 200;
-  const slidesPerMobileView = 390 / mobileWidth; //mobile view
+  const slidesPerMobileView = window.innerWidth / mobileWidth; //mobile view
 
   console.log(props.items);
 
@@ -38,11 +37,10 @@ export const CardSwiper = (props: {
         spaceBetween={props.isMinimalCardShow ? -40 : 15}
       >
         {props.items.map((item, index) => {
-
           return (
             <SwiperSlide key={index}>
               <div className='flex-center flex-column'>
-                {!!isDish(item)  && (
+                {!!isDish(item) && (
                   <h3 className='above-card-title'> {item.restaurant.name}</h3>
                 )}
                 <Card
