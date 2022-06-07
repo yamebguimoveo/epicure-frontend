@@ -51,12 +51,20 @@
     }
   }
   @include for-mobile-layout {
+    .header-secondary-links{
+      margin-top:10px;
+      img{
+        width: 20px;
+      height: 20px;
+        }
+      }
     .search-input-div {
       border: none;
       width: 20px;
       height: 20px;
     }
     .sidebar-button {
+        margin-top:5px; 
       img {
         width: 20px;
         height: 15px;

@@ -89,6 +89,7 @@
       margin: auto;
       margin-bottom: 25px;
       span {
+        padding-bottom: 4px;
         text-align: center;
         border-bottom: 2px solid rgba(222, 146, 0, 0.9);
       }
@@ -125,5 +126,10 @@
   }
   @include for-mobile-layout {
     width: 100%;
+    .dish-footer {
+      .dish-description {
+        font-size: 17px;
+      }
+    }
   }
 }
