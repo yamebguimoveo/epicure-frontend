@@ -3,8 +3,3 @@ export const sensitivitiesIcons: Icon[] = [
   { iconMeaning: "vegetarian", iconUrl: "/assets/icons/vegetarian-icon.svg" },
   { iconMeaning: "vegan", iconUrl: "/assets/icons/vegan-icon.svg" },
 ];
-
-export const stores: Icon[] = [
-  { iconMeaning: "App Store", iconUrl: "/assets/icons/appleIcon.svg" },
-  { iconMeaning: "Google Store", iconUrl: "/assets/icons/googleStoreIcon.svg" },
-];

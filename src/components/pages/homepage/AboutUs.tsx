@@ -1,6 +1,5 @@
 import React from "react";
-import { stores } from "../../../utils/icons";
-import { DownloadButton } from "../../reusable/DownloadButton";
+
 
 export const AboutUs = () => {
   return (
@@ -23,8 +22,26 @@ export const AboutUs = () => {
           ></img>
         </div>
         <div className='download-buttons align-self-start flex-row'>
-          <DownloadButton store={stores[0]} />
-          <DownloadButton store={stores[1]} />
+          <button className='download-button'>
+            <img
+              src={"/assets/icons/appleIcon.svg"}
+              alt={"App Store Download"}
+            ></img>
+            <div className='flex-column'>
+              <p>Download on the</p>
+              <h3>App Store</h3>
+            </div>
+          </button>
+          <button className='download-button'>
+            <img
+              src={"/assets/icons/googleStoreIcon.svg"}
+              alt={"Google Play"}
+            ></img>
+            <div className='flex-column'>
+              <p>Get it on</p>
+              <h3>Google Play</h3>
+            </div>
+          </button>
         </div>
       </div>
     </section>

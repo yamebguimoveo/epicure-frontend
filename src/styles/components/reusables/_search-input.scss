@@ -1,0 +1,13 @@
+
+.search-input-div {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  border: 1px solid rgba(black, 0.5);
+  border-radius: 4px;
+  opacity: 0.53;
+  .search-input {
+    width: 80%;
+    background: none;
+  }
+}

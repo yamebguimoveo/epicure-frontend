@@ -8,7 +8,7 @@ export const Header = () => {
   //forMobile
   const isMobile = useMediaQuery({ query: "(max-width:500px)" });
   const [isSidebarHidden, setIsSidebarHidden] = useState(true);
-  
+
   //handler function for open/close sidebar 
   const sidebarHandler = () => {
     setIsSidebarHidden(!isSidebarHidden);

@@ -7,14 +7,12 @@ import { CardSwiper } from "../../reusable/CardSwiper";
 export const ChefOfTheWeek = (props: { chef: Chef | null }) => {
   const isMobile = useMediaQuery({ query: "(max-width:500px)" });
 
-  console.log(props.chef);
-
   if (props.chef === null) {
     return <></>;
   }
 
   return (
-    <section className='week-chef-section align-start flex-column container-1100'>
+    <section className='week-chef-section'>
       <h3 className='section-title align-center'>CHEF OF THE WEEK:</h3>
       <div className='chef-middle-content flex-row'>
         <img
@@ -33,8 +31,7 @@ export const ChefOfTheWeek = (props: { chef: Chef | null }) => {
         <CardSwiper items={props.chef.restaurants} isMinimalCardShow={true} />
       ) : (
         <div className='chef-restaurants-cards flex-row'>
-          {/* need to replace key value */}
-          {props.chef.restaurants.map((restaurant, index) => {
+          {props.chef.restaurants.map((restaurant) => {
             return (
               <Card
                 key={restaurant._id}
