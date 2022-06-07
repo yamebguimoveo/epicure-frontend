@@ -16,7 +16,7 @@ export const CardSwiper = (props: {
 }) => {
   //for mobile carousel
   const mobileWidth = props.isMinimalCardShow ? 170 : props.isDish ? 260 : 200;
-  const slidesPerMobileView = window.innerWidth / mobileWidth; //mobile view
+  const slidesPerMobileView = 380 / mobileWidth; //mobile view
 
   console.log(props.items);
 
