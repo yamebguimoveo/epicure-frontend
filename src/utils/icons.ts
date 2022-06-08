@@ -1,5 +1,5 @@
 export const sensitivitiesIcons: Icon[] = [
-  { iconMeaning: "spicy", iconUrl: "/assets/icons/spicy-icon.svg" },
-  { iconMeaning: "vegetarian", iconUrl: "/assets/icons/vegetarian-icon.svg" },
-  { iconMeaning: "vegan", iconUrl: "/assets/icons/vegan-icon.svg" },
+  { iconMeaning: "Spicy", iconUrl: "/assets/icons/spicy-icon.svg" },
+  { iconMeaning: "Vegetarian", iconUrl: "/assets/icons/vegetarian-icon.svg" },
+  { iconMeaning: "Vegan", iconUrl: "/assets/icons/vegan-icon.svg" },
 ];

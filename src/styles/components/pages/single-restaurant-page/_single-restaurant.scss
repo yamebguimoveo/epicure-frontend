@@ -10,7 +10,7 @@
   .restaurant-page-image {
     height: 400px;
     object-fit: cover;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
   }
   .restaurant-title {
     font-family: HelveticaNeue;
@@ -36,6 +36,7 @@
     align-items: center;
     justify-self: center;
     gap: 30px;
+    margin: 0;
     margin-bottom: 40px;
     button {
       font-family: HelveticaNeueThin;
@@ -72,6 +73,9 @@
       .dish-footer {
         height: 100%;
         justify-content: space-between;
+        .dish-description {
+          letter-spacing: 1.3px;
+        }
         .card-price {
           padding-bottom: 15px;
         }
@@ -90,13 +94,18 @@
     }
   }
   @include for-mobile-layout {
+    .restaurant-page-image {
+      height: 250px;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
     .restaurant-title {
       font-family: HelveticaNeue;
       font-size: 35px;
     }
     .restaurant-chef {
       font-size: 24px;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
     }
     .restaurant-availability {
       display: flex;

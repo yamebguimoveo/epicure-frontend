@@ -28,6 +28,9 @@
     .dish-footer {
       height: 100%;
       padding-bottom: 5px;
+      .dish-description {
+        letter-spacing: 1.6px;
+      }
 
       .price-line {
         width: 112px;

@@ -867,9 +867,6 @@ ul {
   background-color: #f9f4ea;
   font-size: 25px;
   text-align: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   cursor: pointer;
 }
 
@@ -1281,10 +1278,12 @@ ul {
 
 .recommended-restaurant-section .card .card-title {
   letter-spacing: 2.7px;
+  margin-bottom: 5px;
 }
 
 .recommended-restaurant-section .card img {
   height: 220px;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 500px) {
@@ -1294,6 +1293,9 @@ ul {
   }
   .recommended-restaurant-section .all-restaurant-link {
     display: none;
+  }
+  .recommended-restaurant-section .section-title {
+    margin-bottom: 15px;
   }
   .recommended-restaurant-section .card {
     gap: 0px;
@@ -1306,10 +1308,14 @@ ul {
     max-width: 150px;
     font-size: 25px;
     letter-spacing: 1.7px;
+    max-height: 30px;
+    overflow: hidden;
+    margin-bottom: 5px;
   }
   .recommended-restaurant-section .card img {
-    height: 220px;
+    height: 220px !important;
     width: 200px;
+    margin-bottom: 30px;
   }
 }
 
@@ -1359,6 +1365,10 @@ ul {
 .signature-dishes-section .card .dish-footer {
   height: 100%;
   padding-bottom: 5px;
+}
+
+.signature-dishes-section .card .dish-footer .dish-description {
+  letter-spacing: 1.6px;
 }
 
 .signature-dishes-section .card .dish-footer .price-line {
@@ -1471,6 +1481,10 @@ ul {
   width: 60px;
 }
 
+.icons-section .icons .icon p {
+  letter-spacing: 1.8px;
+}
+
 @media (max-width: 500px) {
   .icons-section {
     margin-bottom: 70px;
@@ -1536,10 +1550,14 @@ ul {
 .week-chef-section .restaurant-minimal-card {
   width: 230px;
   height: 360px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
 .week-chef-section .restaurant-minimal-card .card-title {
-  margin: auto 0;
+  font-size: 30px;
+  margin-top: 20px;
 }
 
 .week-chef-section .restaurant-minimal-card img {
@@ -1552,6 +1570,9 @@ ul {
         -ms-flex-align: center;
             align-items: center;
     margin-bottom: 100px;
+  }
+  .week-chef-section .section-title {
+    margin-bottom: 15px;
   }
   .week-chef-section .chef-middle-content {
     padding: 0 25px;
@@ -1582,6 +1603,8 @@ ul {
     margin-bottom: 30px;
   }
   .week-chef-section .chef-middle-content .chef-image {
+    -o-object-fit: cover;
+       object-fit: cover;
     max-width: 330px;
     max-height: 240px;
     margin-bottom: 20px;
@@ -1679,6 +1702,7 @@ ul {
   font-size: 22px;
   -ms-flex-line-pack: end;
       align-content: end;
+  letter-spacing: 1.7px;
 }
 
 .about-us-section .download-buttons {
@@ -1836,10 +1860,12 @@ ul {
 }
 
 .restaurants-cards .card .card-title {
-  margin: 10px 0 0;
+  margin: 25px 0 10px 0;
+  letter-spacing: 2.5px;
 }
 
 .restaurants-cards .card p {
+  letter-spacing: 1.6px;
   padding: 0 0 25px;
 }
 
@@ -1866,7 +1892,9 @@ ul {
     height: 120px;
   }
   .restaurants-cards .card .card-title {
+    margin: 10px 0 5px 0;
     font-size: 17px;
+    letter-spacing: 1.15px;
   }
 }
 
@@ -1998,6 +2026,7 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 0 20px;
   margin-bottom: 40px;
   font-size: 18px;
 }
@@ -2068,6 +2097,14 @@ ul {
   .dish-modal .dish-footer .dish-description {
     font-size: 17px;
   }
+  .dish-modal .dish-form {
+    width: 100%;
+  }
+  .dish-modal .dish-form .dish-form-submit {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
 }
 
 .popup-content {
@@ -2120,7 +2157,7 @@ ul {
   height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .restaurant-page .restaurant-title {
@@ -2163,6 +2200,7 @@ ul {
           align-items: center;
   justify-self: center;
   gap: 30px;
+  margin: 0;
   margin-bottom: 40px;
 }
 
@@ -2221,6 +2259,10 @@ ul {
           justify-content: space-between;
 }
 
+.restaurant-page .dish-cards .card .dish-footer .dish-description {
+  letter-spacing: 1.3px;
+}
+
 .restaurant-page .dish-cards .card .dish-footer .card-price {
   padding-bottom: 15px;
 }
@@ -2239,13 +2281,19 @@ ul {
 }
 
 @media (max-width: 500px) {
+  .restaurant-page .restaurant-page-image {
+    height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin-bottom: 15px;
+  }
   .restaurant-page .restaurant-title {
     font-family: HelveticaNeue;
     font-size: 35px;
   }
   .restaurant-page .restaurant-chef {
     font-size: 24px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
   }
   .restaurant-page .restaurant-availability {
     display: -webkit-box;
