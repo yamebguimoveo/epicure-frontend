@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { mockRestaurants, mockDishes } from "../../../utils/mockData";
 import { useParams } from "react-router-dom";
 import { FilterNavbar } from "../../reusable/FilterNavbar";
 import { Card } from "../../reusable/Card";
@@ -8,11 +7,13 @@ import ReactLoading from "react-loading";
 import { DishModal } from "./DishModal";
 import { getRestaurant } from "../../../services/restaurantPage/getRestaurant";
 import { getDishesByRestaurant } from "../../../services/restaurantPage/getDishesByRestaurants";
+import { sortByMealType } from "../../../utils/filter";
 
 type Meal = "Breakfast" | "Lunch" | "Dinner";
 
 export const RestaurantPage = () => {
   const { restaurantId } = useParams<string>();
+
   const [filterTerm, setFilterTerm] = useState<Meal>("Breakfast");
   const [dishModal, setDishModal] = useState<Dish | null>(null);
   const [restaurant, setRestaurant] = useState<Restaurant>();
@@ -51,6 +52,7 @@ export const RestaurantPage = () => {
       setFilterTerm(newFilterTerm);
     }
   };
+
   if (restaurant === undefined || dishes === undefined) {
     return (
       <ReactLoading
@@ -73,7 +75,7 @@ export const RestaurantPage = () => {
       <h3 className='restaurant-chef'>{restaurant!.chef.name}</h3>
       <h4 className='restaurant-availability'>
         <img src={"/assets/icons/clock-icon.svg"} alt='clock'></img>
-        <span>Open Now</span>
+        <span>{restaurant.isOpen ? "Open Now" : "Closed"}</span>
       </h4>
 
       <FilterNavbar
@@ -82,7 +84,7 @@ export const RestaurantPage = () => {
         handlerFunc={handleFilter}
       />
       <div className='dish-cards'>
-        {dishes.map((dish, index) => {
+        {sortByMealType(dishes, filterTerm).map((dish, index) => {
           return (
             <Popup
               key={index}

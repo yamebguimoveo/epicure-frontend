@@ -22,8 +22,6 @@ export const Homepage = () => {
   useEffect(() => {
     async function getDishesForHomepage() {
       const homepageReq = await getHomepageData();
-      console.log(homepageReq);
-
       setChefWeek(homepageReq.chef);
       setRecommendedRestaurants(homepageReq.restaurants);
       setSignatureDishes(homepageReq.dishes);

@@ -14,6 +14,5 @@ export const getRestaurants = async (
     reqUrl = `${url}`;
   }
   const restaurantsRes = await axios.get(reqUrl);
-  console.log(restaurantsRes.data);
   return restaurantsRes.data;
 };

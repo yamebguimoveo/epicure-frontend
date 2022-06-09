@@ -18,8 +18,6 @@ export const CardSwiper = (props: {
   const mobileWidth = props.isMinimalCardShow ? 170 : props.isDish ? 260 : 200;
   const slidesPerMobileView = 380 / mobileWidth; //mobile view
 
-  console.log(props.items);
-
   return (
     <div className='card-swiper flex-center'>
       <Swiper
