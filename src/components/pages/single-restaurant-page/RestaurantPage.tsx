@@ -32,7 +32,6 @@ export const RestaurantPage = () => {
   }, []);
 
   const handleClickOnDish = (dish: Dish) => {
-    console.log(dish);
     if (dishModal === null) {
       setDishModal(dish);
       document.body.style.overflow = "hidden";
