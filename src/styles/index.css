@@ -1767,6 +1767,8 @@ ul {
   }
   .about-us-section .about-us-content .about-us-middle-content .about-us-logo {
     margin: 35px 0 35px 0;
+    height: 130px;
+    width: 140px;
   }
   .about-us-section .about-us-content .about-us-middle-content .about-us-description {
     font-size: 14px;
