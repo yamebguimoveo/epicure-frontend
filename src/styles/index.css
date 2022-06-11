@@ -1348,6 +1348,11 @@ ul {
   height: 650px;
 }
 
+.signature-dishes-section .card img {
+  height: 290px;
+  width: 100%;
+}
+
 .signature-dishes-section .card .card-title {
   padding: 10px;
 }
@@ -1399,6 +1404,10 @@ ul {
     width: 260px;
     height: 470px;
     font-size: 17px;
+  }
+  .signature-dishes-section .card img {
+    height: 210px;
+    width: 100%;
   }
   .signature-dishes-section .card .card-title {
     letter-spacing: 1.7px;

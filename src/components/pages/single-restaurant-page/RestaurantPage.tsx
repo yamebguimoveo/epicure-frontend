@@ -83,11 +83,11 @@ export const RestaurantPage = () => {
         handlerFunc={handleFilter}
       />
       <div className='dish-cards'>
-        {sortByMealType(dishes, filterTerm).map((dish, index) => {
+        {sortByMealType(dishes, filterTerm).map((dish) => {
           return (
             <Popup
-              key={index}
-              open={dishModal !== null ? true : false}
+              key={dish._id}
+              open={dishModal !== null && dishModal._id === dish._id ? true : false}
               trigger={
                 <Card openModalHandler={handleClickOnDish} data={dish} />
               }
