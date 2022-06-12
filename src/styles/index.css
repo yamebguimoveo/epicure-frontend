@@ -827,6 +827,7 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow-y: hidden;
 }
 
 @media (max-width: 500px) {
@@ -1240,6 +1241,7 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   justify-self: center;
+  overflow-x: hidden;
 }
 
 .recommended-restaurant-section .all-restaurant-link {
@@ -1335,6 +1337,7 @@ ul {
   max-width: 1100px;
   gap: 40px;
   margin-bottom: 90px;
+  overflow-x: hidden;
 }
 
 .signature-dishes-section .above-card-title {
@@ -1518,6 +1521,7 @@ ul {
   max-width: 1100px;
   width: 100%;
   margin-bottom: 120px;
+  overflow-x: hidden;
 }
 
 .week-chef-section .section-title {

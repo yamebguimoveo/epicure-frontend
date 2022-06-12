@@ -4,6 +4,7 @@
   align-items: center;
   justify-self: center;
   flex-direction: column;
+  overflow-y: hidden;
   @include for-mobile-layout {
     min-height: calc(100vh - 175px - 55px); //header 55px footer 175px(mobile)
     gap: 0;
