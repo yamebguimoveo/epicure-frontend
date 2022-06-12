@@ -839,7 +839,6 @@ ul {
 
 .main .card-swiper {
   width: 100%;
-  margin-left: 20px;
 }
 
 .main .section-title {
@@ -968,6 +967,11 @@ ul {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 15px;
+}
+
+.header .logo img {
+  width: 33px;
+  height: 33px;
 }
 
 .header .logo .logo-title {
@@ -1268,6 +1272,28 @@ ul {
   height: 18px;
 }
 
+.recommended-restaurant-section .swiper-button-next {
+  color: black;
+  padding: 30px;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.recommended-restaurant-section .swiper-button-next:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.recommended-restaurant-section .swiper-button-prev {
+  color: black;
+  padding: 30px;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.recommended-restaurant-section .swiper-button-prev:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
 .recommended-restaurant-section .section-title {
   margin-bottom: 40px;
 }
@@ -1292,6 +1318,16 @@ ul {
   .recommended-restaurant-section {
     margin-top: 0px;
     margin-bottom: 100px;
+  }
+  .recommended-restaurant-section .swiper-wrapper:first-child {
+    -webkit-margin-start: 20px;
+            margin-inline-start: 20px;
+  }
+  .recommended-restaurant-section .swiper-button-next {
+    display: none;
+  }
+  .recommended-restaurant-section .swiper-button-prev {
+    display: none;
   }
   .recommended-restaurant-section .all-restaurant-link {
     display: none;
@@ -1389,10 +1425,44 @@ ul {
   font-family: Courier New, Courier, monospace;
 }
 
+.signature-dishes-section .swiper-button-next {
+  top: 30%;
+  color: black;
+  padding: 30px;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.signature-dishes-section .swiper-button-prev {
+  top: 30%;
+  color: black;
+  padding: 30px;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.signature-dishes-section .swiper-button-next:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.signature-dishes-section .swiper-button-prev:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
 @media (max-width: 500px) {
   .signature-dishes-section {
     margin-bottom: 100px;
     gap: 15px;
+  }
+  .signature-dishes-section .swiper-wrapper:first-child {
+    -webkit-margin-start: 20px;
+            margin-inline-start: 20px;
+  }
+  .signature-dishes-section .swiper-button-next {
+    display: none;
+  }
+  .signature-dishes-section .swiper-button-prev {
+    display: none;
   }
   .signature-dishes-section .above-card-title {
     font-size: 16px;
@@ -1637,6 +1707,12 @@ ul {
     width: 150px;
     height: 150px;
   }
+  .week-chef-section .swiper-button-next {
+    display: none;
+  }
+  .week-chef-section .swiper-button-prev {
+    display: none;
+  }
 }
 
 .about-us-section {
@@ -1840,21 +1916,51 @@ ul {
   }
 }
 
+.pagination {
+  padding: 30px 0;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.pagination li {
+  display: inline-block;
+  padding: 10px 18px;
+  font-family: HelveticaNeue;
+  color: #222;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+  background-color: rgba(222, 146, 0, 0.4);
+  margin: 5px;
+  margin-bottom: 20px;
+  border-radius: 100%;
+}
+
+.pagination li.selected {
+  background-color: rgba(222, 146, 0, 0.9);
+  color: #fff;
+}
+
+.pagination .previous {
+  display: none;
+}
+
+.pagination .next {
+  display: none;
+}
+
 .restaurants-cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  justify-self: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  -ms-flex-line-pack: start;
+      align-content: start;
   max-width: 1100px;
-  -ms-flex-flow: wrap;
-      flex-flow: wrap;
   gap: 40px;
   margin-bottom: 20px;
 }
@@ -1881,6 +1987,8 @@ ul {
 
 @media (max-width: 500px) {
   .restaurants-cards {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1908,9 +2016,9 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: fixed;
+  position: relative;
+  margin-bottom: 10px;
   background: none;
-  top: 3%;
 }
 
 .dish-modal-close .dish-modal-close-button {
@@ -1920,6 +2028,7 @@ ul {
 
 @media (max-width: 500px) {
   .dish-modal-close {
+    position: fixed;
     top: 0;
     height: 45px;
     width: 100%;
@@ -2276,13 +2385,10 @@ ul {
 }
 
 .restaurant-page .dish-cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
   -ms-flex-flow: wrap;
       flex-flow: wrap;
   width: 100%;
@@ -2292,6 +2398,20 @@ ul {
           justify-content: center;
   gap: 50px;
   margin-bottom: 20px;
+}
+
+@media (min-width: 820px) and (max-width: 1100px) {
+  .restaurant-page .dish-cards {
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media (min-width: 500px) and (max-width: 820px) {
+  .restaurant-page .dish-cards {
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+  }
 }
 
 .restaurant-page .dish-cards .card {
@@ -2322,14 +2442,22 @@ ul {
 
 .restaurant-page .dish-cards .card .dish-footer .dish-description {
   letter-spacing: 1.3px;
-}
-
-.restaurant-page .dish-cards .card .dish-footer .card-price {
-  padding-bottom: 15px;
+  max-height: 115px;
+  overflow: hidden;
 }
 
 .restaurant-page .dish-cards .card .dish-footer .sensitivities-icons {
-  display: none;
+  gap: 5px;
+}
+
+.restaurant-page .dish-cards .card .dish-footer .sensitivities-icons img {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 0;
+}
+
+.restaurant-page .dish-cards .card .dish-footer .card-price {
+  padding-bottom: 10px;
 }
 
 .restaurant-page .dish-cards .card .dish-footer .price-line {
@@ -2380,6 +2508,8 @@ ul {
     font-size: 15px;
   }
   .restaurant-page .dish-cards {
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
     gap: 25px;
   }
   .restaurant-page .dish-cards .card {
@@ -2395,15 +2525,16 @@ ul {
     font-size: 15px;
     margin-bottom: 10px;
   }
+  .restaurant-page .dish-cards .card .dish-footer .dish-description {
+    margin: 0 20px;
+    max-height: 75px;
+  }
   .restaurant-page .dish-cards .card .dish-footer .card-price .price-line {
     width: 30px;
     border-bottom: 1px solid #979797;
   }
   .restaurant-page .dish-cards .card .dish-footer .card-price .price {
     margin: 0 3px;
-  }
-  .restaurant-page .dish-cards .card .sensitivities-icons {
-    display: none;
   }
 }
 

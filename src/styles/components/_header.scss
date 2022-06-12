@@ -46,25 +46,29 @@
     justify-self: center;
     flex-direction: row;
     gap: 15px;
+    img {
+      width: 33px;
+      height: 33px;
+    }
     .logo-title {
       font-size: 30px;
     }
   }
   @include for-mobile-layout {
-    .header-secondary-links{
-      margin-top:10px;
-      img{
+    .header-secondary-links {
+      margin-top: 10px;
+      img {
         width: 20px;
-      height: 20px;
-        }
+        height: 20px;
       }
+    }
     .search-input-div {
       border: none;
       width: 20px;
       height: 20px;
     }
     .sidebar-button {
-        margin-top:5px; 
+      margin-top: 5px;
       img {
         width: 20px;
         height: 15px;

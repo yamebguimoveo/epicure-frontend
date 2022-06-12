@@ -29,13 +29,48 @@
   }
 }
 
+//PAGINATIONNNNNNNN
+.pagination {
+  padding: 30px 0;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  li {
+    display: inline-block;
+    padding: 10px 18px;
+    font-family: HelveticaNeue;
+    color: #222;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(222, 146, 0, 0.4);
+    margin: 5px;
+    margin-bottom: 20px;
+    border-radius: 100%;
+  }
+  li.selected {
+    background-color: rgba(222, 146, 0, 0.9);
+    color: #fff;
+  }
+}
+.pagination {
+  .previous {
+    display: none;
+  }
+  .next {
+    display: none;
+  }
+}
+//
+
 .restaurants-cards {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-self: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-content: start;
   max-width: 1100px;
-  flex-flow: wrap;
   gap: 40px;
   margin-bottom: 20px;
   .card {
@@ -54,7 +89,9 @@
       height: 210px;
     }
   }
+
   @include for-mobile-layout {
+    grid-template-columns: auto auto;
     justify-content: center;
     gap: 10px;
     margin-bottom: 20px;

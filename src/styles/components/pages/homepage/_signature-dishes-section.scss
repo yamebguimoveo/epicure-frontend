@@ -47,9 +47,40 @@
       }
     }
   }
+  //  Navigation On Swiper
+  .swiper-button-next {
+    top: 30%;
+    color: black;
+    padding: 30px;
+    border-radius: 40px;
+    background: rgba(white, 0.4);
+  }
+  .swiper-button-prev {
+    top: 30%;
+    color: black;
+    padding: 30px;
+    border-radius: 40px;
+    background: rgba(white, 0.4);
+  }
+  .swiper-button-next:hover {
+    background: rgba(white, 0.6);
+  }
+  .swiper-button-prev:hover {
+    background: rgba(white, 0.6);
+  }
+  //
   @include for-mobile-layout {
     margin-bottom: 100px;
     gap: 15px;
+    .swiper-wrapper:first-child {
+      margin-inline-start: 20px;
+    }
+    .swiper-button-next {
+      display: none;
+    }
+    .swiper-button-prev {
+      display: none;
+    }
     .above-card-title {
       font-size: 16px;
     }

@@ -9,7 +9,7 @@ export const Header = () => {
   const isMobile = useMediaQuery({ query: "(max-width:500px)" });
   const [isSidebarHidden, setIsSidebarHidden] = useState(true);
 
-  //handler function for open/close sidebar 
+  //handler function for open/close sidebar
   const sidebarHandler = () => {
     setIsSidebarHidden(!isSidebarHidden);
   };
@@ -43,7 +43,7 @@ export const Header = () => {
         {isMobile ? (
           <Link to='/'>
             <li className='nav-item logo'>
-              <img src='/assets/logo/logo.jpg' alt='logo'></img>
+              <img src='/assets/logo/logo.svg' alt='logo'></img>
             </li>
           </Link>
         ) : (
@@ -63,7 +63,7 @@ export const Header = () => {
           <li className='nav-item'>
             <img
               className='action-icon'
-               src='/assets/icons/bag-icon.svg'
+              src='/assets/icons/bag-icon.svg'
               alt='cart'
             ></img>
           </li>

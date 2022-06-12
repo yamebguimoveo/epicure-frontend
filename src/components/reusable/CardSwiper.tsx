@@ -4,6 +4,9 @@ import { Lazy } from "swiper";
 import { Card } from "./Card";
 import "swiper/css";
 import "swiper/css/lazy";
+import "swiper/css/navigation";
+
+import { Navigation } from "swiper";
 
 const isDish = (object: Dish | Restaurant): object is Dish => {
   return (object as Dish).price !== undefined;
@@ -15,15 +18,20 @@ export const CardSwiper = (props: {
   isMinimalCardShow?: boolean;
 }) => {
   //for mobile carousel
-  const mobileWidth = props.isMinimalCardShow ? 170 : props.isDish ? 260 : 200;
-  const slidesPerMobileView = 380 / mobileWidth; //mobile view
+  const cardMobileWidth = props.isMinimalCardShow
+    ? 170
+    : props.isDish
+    ? 260
+    : 200;
+  const slidesPerMobileView = window.innerWidth / cardMobileWidth; //mobile view
 
   return (
     <div className='card-swiper flex-center'>
       <Swiper
         slidesPerView={slidesPerMobileView}
         lazy={true}
-        modules={[Lazy]}
+        navigation={true}
+        modules={[Lazy, Navigation]}
         breakpoints={{
           500: {
             slidesPerView: 2,
@@ -32,7 +40,7 @@ export const CardSwiper = (props: {
             slidesPerView: 3,
           },
         }}
-        spaceBetween={props.isMinimalCardShow ? -40 : 15}
+        spaceBetween={props.isMinimalCardShow ? -25 : 15}
       >
         {props.items.map((item, index) => {
           return (

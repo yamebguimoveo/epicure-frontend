@@ -1,13 +1,15 @@
 .dish-modal-close {
   display: flex;
-  position: fixed;
+  position: relative;
+  margin-bottom: 10px;
   background: none;
-  top: 3%;
+
   .dish-modal-close-button {
     width: 20px;
     height: 20px;
   }
   @include for-mobile-layout {
+    position: fixed;
     top: 0;
     height: 45px;
     width: 100%;
