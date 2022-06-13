@@ -108,7 +108,7 @@ export const RestaurantsPage = (props: {}) => {
       </div>
       <Pagination
         changeFunction={handleChangePage}
-        pageCount={Math.ceil(restsExistNumber / 6)}
+        pageCount={Math.ceil(restsExistNumber / numberCardsOnPage)}
         activePage={pageNumber}
       />
     </Fragment>
