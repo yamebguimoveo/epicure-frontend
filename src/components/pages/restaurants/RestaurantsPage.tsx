@@ -3,7 +3,7 @@ import { Card } from "../../reusable/Card";
 import { FilterNavbar } from "../../reusable/FilterNavbar";
 import { getRestaurants } from "../../../services/restaurantsPage/getRestaurants";
 import ReactLoading from "react-loading";
-import ReactPaginate from "react-paginate";
+import { useMediaQuery } from "react-responsive";
 import { refreshAvailablity } from "../../../services/restaurantsPage/refreshAvailability";
 import { Pagination } from "./Pagination";
 
@@ -12,6 +12,9 @@ export const RestaurantsPage = (props: {}) => {
   const [restaurants, setRestaurants] = useState<Restaurant[]>();
   const [pageNumber, setPageNumber] = useState(1);
   const [restsExistNumber, setRestsExistNumber] = useState(0);
+
+  const isMobile = useMediaQuery({ query: "(max-width: 500px)" });
+  const numberCardsOnPage = isMobile ? 8 : 9;
 
   useEffect(() => {
     async function getRests() {
@@ -33,7 +36,7 @@ export const RestaurantsPage = (props: {}) => {
         await refreshAvailablity();
       }
       setRestaurants(undefined);
-      const restaurantsReq = await getRestaurants(filter, 1, 6);
+      const restaurantsReq = await getRestaurants(filter, 1, numberCardsOnPage);
       setPageNumber(1);
       setRestaurants(restaurantsReq.data.restaurants);
       setRestsExistNumber(restaurantsReq.data.count);
@@ -58,7 +61,11 @@ export const RestaurantsPage = (props: {}) => {
           break;
       }
       setRestaurants(undefined);
-      const restaurantsReq = await getRestaurants(filter, pageNumber, 6);
+      const restaurantsReq = await getRestaurants(
+        filter,
+        pageNumber,
+        numberCardsOnPage
+      );
       setRestaurants(restaurantsReq.data.restaurants);
       setRestsExistNumber(restaurantsReq.data.count);
     }

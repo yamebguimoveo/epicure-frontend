@@ -17,6 +17,8 @@
     width: 360px;
     height: 650px;
     .card-title {
+      min-height: 115px;
+      display: flex;
       padding: 10px;
     }
     .sensitivities-icons {
@@ -31,6 +33,7 @@
       padding-bottom: 5px;
       .dish-description {
         letter-spacing: 1.6px;
+        @include limit-text-lines(4);
       }
 
       .price-line {
@@ -39,7 +42,7 @@
         border-bottom: solid 0.5px #979797;
       }
       .price {
-        margin: 0 15px;
+        margin: 0;
         .price-symbol {
           margin: 0 1px;
           font-family: Courier New, Courier, monospace;
@@ -90,8 +93,10 @@
       height: 470px;
       font-size: 17px;
       .card-title {
+        min-height: 85px;
+        max-height: 85px;
         letter-spacing: 1.7px;
-        max-width: 150px;
+        max-width: 200px;
         font-size: 27px;
         padding: 10px;
       }

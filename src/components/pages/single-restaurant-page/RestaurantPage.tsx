@@ -19,6 +19,7 @@ export const RestaurantPage = () => {
   const [restaurant, setRestaurant] = useState<Restaurant>();
   const [dishes, setDishes] = useState<Dish[]>();
 
+
   useEffect(() => {
     async function getRestaurantPageData() {
       if (restaurantId) {
@@ -87,7 +88,9 @@ export const RestaurantPage = () => {
           return (
             <Popup
               key={dish._id}
-              open={dishModal !== null && dishModal._id === dish._id ? true : false}
+              open={
+                dishModal !== null && dishModal._id === dish._id ? true : false
+              }
               trigger={
                 <Card openModalHandler={handleClickOnDish} data={dish} />
               }

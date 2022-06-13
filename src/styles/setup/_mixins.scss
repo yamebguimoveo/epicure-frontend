@@ -30,6 +30,14 @@
   letter-spacing: $letter-spacing;
 }
 
+@mixin limit-text-lines($lines-number) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines-number; 
+  -webkit-box-orient: vertical;
+}
+
 @mixin layoutGTCHome($max) {
   grid-template-columns:
     $layoutPaddingHome

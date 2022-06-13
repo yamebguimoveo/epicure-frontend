@@ -81,8 +81,8 @@
         justify-content: space-between;
         .dish-description {
           letter-spacing: 1.3px;
-          max-height: 115px;
-          overflow: hidden;
+          min-height: 106px;
+          @include limit-text-lines(5);
         }
         .sensitivities-icons {
           gap: 5px;
@@ -156,6 +156,9 @@
         }
         .dish-footer {
           .dish-description {
+            min-height: 0;
+            max-height: 80px;
+            @include limit-text-lines(3);
             margin: 0 20px;
             max-height: 75px;
           }
