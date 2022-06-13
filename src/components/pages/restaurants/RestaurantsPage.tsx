@@ -4,6 +4,8 @@ import { FilterNavbar } from "../../reusable/FilterNavbar";
 import { getRestaurants } from "../../../services/restaurantsPage/getRestaurants";
 import ReactLoading from "react-loading";
 import ReactPaginate from "react-paginate";
+import { refreshAvailablity } from "../../../services/restaurantsPage/refreshAvailability";
+import { Pagination } from "./Pagination";
 
 export const RestaurantsPage = (props: {}) => {
   const [filterTerm, setFilterTerm] = useState<string>("All");
@@ -27,6 +29,10 @@ export const RestaurantsPage = (props: {}) => {
         default:
           break;
       }
+      if (filter === "isOpen") {
+        await refreshAvailablity();
+      }
+      setRestaurants(undefined);
       const restaurantsReq = await getRestaurants(filter, 1, 6);
       setPageNumber(1);
       setRestaurants(restaurantsReq.data.restaurants);
@@ -51,6 +57,7 @@ export const RestaurantsPage = (props: {}) => {
         default:
           break;
       }
+      setRestaurants(undefined);
       const restaurantsReq = await getRestaurants(filter, pageNumber, 6);
       setRestaurants(restaurantsReq.data.restaurants);
       setRestsExistNumber(restaurantsReq.data.count);
@@ -59,6 +66,9 @@ export const RestaurantsPage = (props: {}) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pageNumber]);
 
+  const handleChangePage = (page: number) => {
+    setPageNumber(page);
+  };
   const handleFilter = (newFilterTerm: string) => {
     if (newFilterTerm !== filterTerm) {
       setFilterTerm(newFilterTerm);
@@ -89,13 +99,10 @@ export const RestaurantsPage = (props: {}) => {
           return <Card key={index} data={restaurant} />;
         })}
       </div>
-      <ReactPaginate
-        className='pagination'
-        breakLabel='...'
-        onPageChange={(event) => {
-          setPageNumber(event.selected + 1);
-        }}
+      <Pagination
+        changeFunction={handleChangePage}
         pageCount={Math.ceil(restsExistNumber / 6)}
+        activePage={pageNumber}
       />
     </Fragment>
   );
