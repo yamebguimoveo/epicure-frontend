@@ -32,9 +32,9 @@ export const RestaurantsPage = (props: {}) => {
         default:
           break;
       }
-      if (filter === "isOpen") {
-        await refreshAvailablity();
-      }
+      // if (filter === "isOpen") {
+      //   await refreshAvailablity();
+      // }
       setRestaurants(undefined);
       const restaurantsReq = await getRestaurants(filter, 1, numberCardsOnPage);
       setPageNumber(1);
